@@ -1,0 +1,43 @@
+<html>
+<title>User License Agreement</title>
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<head>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type='text/javascript'>
+$(document).ready(function(){
+   $(function() {
+  var chk = $('#check');
+  var btn = $('#btncheck');
+
+  chk.on('change', function() {
+    btn.prop("disabled", !this.checked);//true: disabled, false: enabled
+  }).trigger('change'); //page load trigger event
+});
+});
+</script>
+<style>
+html {
+    background-color:rgb(244, 238, 162);
+}
+</style>
+<body>
+	<div id="title"><p>uPARK END USER LICENSE AGREEMENT</p></div>
+	<div id="center">
+    	<img id="logo" src="images/logo.png">
+	</div>
+	<div id="text">
+		<p id="subtitle" class="license">Scroll down to accept the license agreement</p>
+		<p class="license">You are about to join uPark, your personal parking finder.</p>
+		<p class="license">By clicking "Accept" you confirm that:</p>
+		<p class="license">1. You have read and agree to the <a href="termsOfUse.html">Terms of use</a> and <a href="privacyPolicy.html">Privacy Policy</a>. The user of the service is subject to the agreements and inficates you consent to them.</p>
+		<p class="license">2. Always pay full attentions to the road and abide by all transportation laws and regulations. Phone useage while driving is strictly prohibited</p>
+		<p class="license">3. uPark service is offered for free, with hopes that you find it useful. However uPark or its employees, directors, advisors, or anyone on its behalf shall not be liable to you or to any third party, for any reason whatsoever, as a result of the use of the Company's product or Service. You hereby irrevocably release all of the parties from any liability of any kind, for any consequences arise from use of the Client or Service. This includes any loss, loss of profit, or damage to reputation.</p>
+	</div>
+	<div class="checkbox" id="right">
+  		<input id="check" name="checkbox" type="checkbox">
+		<input id="btncheck" type="submit" name="anmelden" class="button" value="I Agree" onclick="window.location.href=''"/>
+	</div>
+</body>
+</html>

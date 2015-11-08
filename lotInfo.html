@@ -1,0 +1,148 @@
+<html>
+<title id="lotinfotitle">Lot Information</title>
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<head>
+    <script>
+    
+    window.onload = function(){  
+        var timer = document.getElementById("timerButton");
+
+        timer.onclick = function(){
+          //create the new div where all the new inputs will be
+          var new_div = document.createElement("div");
+          document.body.appendChild(new_div);
+
+          //img url
+          var input1 = document.createElement("input");
+          input1.type = "text";
+          input1.placeholder = "Timer Duration";
+          new_div.appendChild(input1);
+          
+          //x,y
+          var input2 = document.createElement("input");
+          input2.type = "checkbox";
+          input2.label = "check";
+          new_div.appendChild(input2);
+      
+
+          var button1 = document.createElement("button");
+          button1.innerHTML = "Start Timer";
+          new_div.appendChild(button1);
+
+          //styles
+          new_div.style.zIndex = 1;
+          new_div.style.width = "80%";
+          new_div.style.height = "300px";
+          new_div.style.position = "fixed";
+          new_div.id = "newdiv";
+          new_div.style.top = 0;
+          new_div.style.bottom = 0;
+          new_div.style.left = 0;
+          new_div.style.right = 0;
+          new_div.style.margin = "auto";
+          new_div.style.backgroundColor = "#333";
+          new_div.style.padding = "10px";  
+        }
+    }
+    </script>
+</head>
+<style>
+p {
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 14px;
+}
+</style>
+<body>
+	<div id="LotinfoTop" class="top">
+		<div class="wrap">
+			<div class="left" onclick="window.location.href='results.html'"><img id="profileicon" class="profile"src="images/back.png"></div>
+			<div class="center" onclick="window.location.href='results.html'"><img class="smalllogo" src="images/logo_transparent.png"></div>
+			<div class="right" onclick="window.location.href='results.html'"><img id="targeticon" class="target" src="images/search.png"></div>	
+		</div>
+		<br>
+	</div>
+
+	<div id="map">
+	</div>
+
+	<div id="timer">
+		<button type="button" id="directions">GET DIRECTIONS</button>
+	</div>
+	
+	<div id="info">
+		<div id="container">
+			<div id="lotImage">lot image
+			</div>
+			<div id="lotInfo">
+				<p id="lotName">inPark</p>
+				<p id="lotAddress" class="margin">123 Yaletown St.</p>
+				<p id="lotCity" class="margin">Vancouver, V2J 2S5</p>
+				<br>
+				<div class="margin">
+					<div id="inline">
+						<p class="bold">Space:</p>
+						<p id="lotSpace"> 167</p>
+					</div>
+				</div><br>
+				<div class="margin">
+					<div id="inline">
+						<p class="bold">Lot:</p>
+						<p id="lotNumber"> #22</p>
+					</div>
+				</div><br>
+				<div class="margin">
+					<div id="inline">
+						<p class="bold">Verrus Lot ID:</p>
+						<p id="lotID"> 2512</p>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</div>
+	
+	<div class="line-separator"></div>
+
+	<div id="rates">
+		<h4>RATES</h4>
+		<div class="ratesContainer">
+			<div id="inline">
+				<p class="bold">Monday-Friday:</p>
+				<p id="weekdayPrice"> $1</p>
+			</div>
+			<div id="inline">
+				<p class="bold">Weekend & Holidays:</p>
+				<p id="weekendPrice"> $1.20</p>
+			</div>		
+		</div>
+	</div>
+
+	<div class="line-separator"></div>
+
+	<div id="hours">
+		<h4>HOURS OF OPERATION</h4>
+		<div id="inline">
+			<p class="bold">Daily:</p>
+			<p id="lotHours"> 1:00AM-6:00PM</p>
+		</div>
+	</div>
+
+	<div class="line-separator"></div>
+	
+	<div id="special">
+		<h4>SPECIAL NOTES</h4>
+		<p id="lotSpecialNotes" class="margin">No motorcyles</strong></p>
+	</div>
+	<br>
+	<br>
+
+	<div id="timerButton">
+		<h2 id="startParking">START PARKING</h2>
+	</div>
+
+
+
+
+
+</body>
+</html>

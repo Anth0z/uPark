@@ -1,0 +1,132 @@
+<html>
+<title>Results</title>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+<style>
+
+.centerdiv{
+	float:left;
+	height:100px;
+	width: 60%;
+}
+
+#lotDistance {
+	text-align: center;
+}
+div.container {
+	border: 1px solid black;
+	overflow: hidden;
+	width: 100%;
+}
+#lotImage {
+	width: 45%;
+	height: 100%;
+	float: left;
+	border: dashed;
+}
+#lotInfo {
+	width: 45%;
+	height: 100%;
+	float:right;
+}
+.results {
+	margin-top: 20px;
+	padding-top: 10px;
+}
+.results{
+	width: 100%;
+	height: 100px;
+	border: solid;
+	margin-bottom: -80px;
+}
+</style>
+<body>
+	<div id="resultsTop" class="top">
+		<div class="wrap">
+			<div class="left" onclick="window.location.href='profile.html'"><img id="profileicon" class="profile" src="images/profile.png"></div>
+			<div class="center" onclick="window.location.href='results.html'"><img class="smalllogo" src="images/logo_transparent.png"></div>
+			<div class="right" onclick="window.location.href='results.html'"><img class="target" src="images/target.png"></div>	
+		</div>
+		<br>
+
+		<input type="text" class="search" placeholder="search destination">
+		</input>
+	</div>
+
+	<div id="map">
+	</div>
+
+	<div class="results" id="lot1" onclick="window.location.href='lotInfo.html'">
+			<div id="left">
+				<h2 id="lotPrice">$100</h2>
+			</div>
+			<div class="centerdiv"> 
+				<div id="container">
+					<div id="lotImage">lot image
+					</div>
+					<div id="lotInfo">
+						<h3 id="lotName">inPark</h3>
+						<p id="lotAddress">123 Yaletown St.</p>
+					</div>
+				</div>	
+			</div>
+			<div id="right">
+				<div id="lotAvailability" class="circleBase circle"> </div>
+				<p id="lotDistance"> 100000km</p>
+			</div>	
+		</div>
+	</div>
+<br>
+<br>
+<br>
+<br>
+	<div class="results" id="lot2" onclick="window.location.href='lotInfo.html'">
+			<div id="left">
+				<h2 id="lotPrice">$100</h2>
+			</div>
+			<div class="centerdiv"> 
+				<div id="container">
+					<div id="lotImage">lot image
+					</div>
+					<div id="lotInfo">
+						<h3 id="lotName">inPark</h3>
+						<p id="lotAddress">123 Yaletown St.</p>
+					</div>
+				</div>	
+			</div>
+			<div id="right">
+				<div id="lotAvailability" class="circleBase circle"> </div>
+				<p id="lotDistance"> 100000km</p>
+			</div>	
+		</div>
+	</div>
+	<br>
+<br>
+<br>
+<br>
+	<div class="results" id="lot3" onclick="window.location.href='lotInfo.html'">
+			<div id="left">
+				<h2 id="lotPrice">$100</h2>
+			</div>
+			<div class="centerdiv"> 
+				<div id="container">
+					<div id="lotImage">lot image
+					</div>
+					<div id="lotInfo">
+						<h3 id="lotName">inPark</h3>
+						<p id="lotAddress">123 Yaletown St.</p>
+					</div>
+				</div>	
+			</div>
+			<div id="right">
+				<div id="lotAvailability" class="circleBase circle"> </div>
+				<p id="lotDistance"> 100000km</p>
+			</div>	
+		</div>
+	</div>
+
+
+
+</body>
+</html>
