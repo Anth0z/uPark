@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>uPark - Results Page</title>
+
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+    <style>
+
+    .centerdiv{
+        float:left;
+        height:100px;
+        width: 60%;
+    }
+
+    #lotDistance {
+        text-align: center;
+    }
+    div.container {
+        border: 1px solid black;
+        overflow: hidden;
+        width: 100%;
+    }
+    #lotImage {
+        width: 45%;
+        height: 100%;
+        float: left;
+        border: dashed;
+    }
+    #lotInfo {
+        width: 45%;
+        height: 100%;
+        float:right;
+    }
+
+    </style>
+    <body>
+        <div id="resultsTop" class="top">
+            <div class="wrap">
+                <div class="left" onclick="window.location.href='profile.html'"><img id="profileicon" class="profile" src="images/profile.png"></div>
+                <div class="center" onclick="window.location.href='results.html'"><img class="smalllogo" src="images/logo_transparent.png"></div>
+                <div class="right" onclick="window.location.href='results.html'"><img class="target" src="images/target.png"></div>	
+            </div>
+            <br>
+
+            <input type="text" class="search" placeholder="search destination">
+            </input>
+        </div>
+
+        <div id="map"></div>
+
+        
+
+    </body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="lots_script.js"></script>
+</html>
