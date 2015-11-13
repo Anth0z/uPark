@@ -1,527 +1,411 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf130
 {\fonttbl\f0\fnil\fcharset0 Monaco;\f1\fnil\fcharset0 Verdana;\f2\froman\fcharset0 Times-Roman;
 \f3\fswiss\fcharset0 ArialMT;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red26\green26\blue26;
 \red38\green38\blue38;}
 \margl1440\margr1440\vieww10800\viewh14440\viewkind0
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs20 \cf0 \CocoaLigature0 START MAMP, then\
 IN TERMINAL:\
-\pard\pardeftab720\sl320
+\pard\pardeftab720\sl320\partightenfactor0
 
 \f1\fs26 \cf2 \expnd0\expndtw0\kerning0
 \CocoaLigature1 \outl0\strokewidth0 \strokec2 PATH=$PATH:/Applications/MAMP/Library/bin
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
+\f2\fs24 \
 
-\f1\fs26 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 export PATH
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
+\f1\fs26 export PATH
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 mysql -u root -p\
+\f1\fs26 \cf2 mysql -u root -p (type, don\'92t copy/paste)
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f0\fs20 \cf0 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
-\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
-\cf0 create database upark;\
-use upark;\
-create table users(\
-    user_id int NOT NULL AUTO_INCREMENT,\
-    username VARCHAR(50),\
-    firstname VARCHAR(50),\
-    lastname VARCHAR(50),\
-    email VARCHAR(50),\
-    password VARCHAR(20),\
-    upark_id VARCHAR(8),\
-    expiration_time TIMESTAMP,\
-    PRIMARY KEY(user_id)\
-    );\
+\f1\fs26 \cf2 create database upark;
+\f2\fs24 \
+
+\f1\fs26 use upark;
+\f2\fs24 \
+
+\f1\fs26 create table users(
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0user_id int NOT NULL AUTO_INCREMENT,
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0username VARCHAR(50) UNIQUE,
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0firstname VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0lastname VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0email VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0password VARCHAR(20),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0upark_id VARCHAR(8),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0expiration_time TIMESTAMP,
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0PRIMARY KEY(user_id)
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0);
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs26 \cf2 create table parkinglots(
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0upark_id int NOT NULL AUTO_INCREMENT,
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0company VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0area VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0lot_num VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0longitude VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0latitude VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0address VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0city VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0province VARCHAR(50),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0country VARCHAR(20),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0postal_code VARCHAR(10),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0rates_weekday VARCHAR(20),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0rates_weekend VARCHAR(20),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0hours_weekday VARCHAR(20),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0hours_weekend VARCHAR(20),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0total_space int (5),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0avail_space int (5),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0PRIMARY KEY(upark_id)
+\f2\fs24 \
+
+\f1\fs26 );
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs26 \cf2 create table favourites(
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0user_id int not null,
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0upark_id int
+\f2\fs24 \
+
+\f1\fs26 );
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs26 \cf2 alter table favourites add FOREIGN KEY (user_id) REFERENCES users(user_id);
+\f2\fs24 \
+
+\f1\fs26 alter table favourites add FOREIGN KEY (upark_id) REFERENCES parkinglots(upark_id);
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs26 \cf2 create table availability(
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0upark_id int,
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0start_time TIMESTAMP,
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0exp_time TIMESTAMP,
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0status int(3), 
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0total_space int(5),
+\f2\fs24 \
+
+\f1\fs26  \'a0\'a0\'a0avail_space int(5)
+\f2\fs24 \
+
+\f1\fs26 );
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs26 \cf2 alter table availability add FOREIGN KEY (upark_id) REFERENCES parkinglots(upark_id);
+\f2\fs24 \
+
+\f1\fs26 alter table availability add FOREIGN KEY (total_space) REFERENCES parkinglots(total_space);
+\f2\fs24 \
+
+\f1\fs26 alter table availability add FOREIGN KEY (avail_space) REFERENCES parkinglots(avail_space);
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs26 \cf2 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f1\fs26 \cf2 LOAD PHP FILE:
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
 \
-create table parkinglots(\
-    upark_id int NOT NULL,\
-    company VARCHAR(50),\
-    area VARCHAR(50),\
-    lot_num VARCHAR(50),\
-    longitude VARCHAR(50),\
-    latitude VARCHAR(50),\
-    address VARCHAR(50),\
-    city VARCHAR(50),\
-    province VARCHAR(50),\
-    country VARCHAR(20),\
-    postal_code VARCHAR(10),\
-    rates_weekday VARCHAR(20),\
-    rates_weekend VARCHAR(20),\
-    hours_weekday VARCHAR(20),\
-    hours_weekend VARCHAR(20),\
-    total_space int (5),\
-    avail_space int (5),\
-    PRIMARY KEY(upark_id)\
-);\
-\
-create table favourites(\
-    user_id int not null,\
-    upark_id int\
-);\
-\
-alter table favourites add FOREIGN KEY (user_id) REFERENCES users(user_id);\
-alter table favourites add FOREIGN KEY (upark_id) REFERENCES parkinglots(upark_id);\
-\
-create table availability(\
-    upark_id int,\
-    start_time TIMESTAMP,\
-    exp_time TIMESTAMP,\
-    status int(3), \
-    total_space int(5),\
-    avail_sapce int(5)\
-);\
-\
-alter table availability add FOREIGN KEY (upark_id) REFERENCES parkinglots(upark_id);\
-alter table availability add FOREIGN KEY (total_space) REFERENCES parkinglots(total_space);\
-alter table availability add FOREIGN KEY (avail_space) REFERENCES parkinglots(avail_space);\
-\
-\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
-\
-\pard\pardeftab720\sl320
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\b\fs26 \cf2 \expnd0\expndtw0\kerning0
-\CocoaLigature1 \outl0\strokewidth0 \strokec2 INSERT INTO USERS ROWS
-\f2\b0\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\b\fs26 \cf2 INSERT INTO USERS ROWS
+\f2\b0\fs24 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO users (username, firstname, lastname, email, password, upark_id) VALUES ('osahui', 'osanna', 'hui', 'omail.com', 'ohuihui', 'up_oh');
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO users (username, firstname, lastname, email, password, upark_id) VALUES ('osahui', 'osanna', 'hui', 'omail.com', 'ohuihui', 'up_oh');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO users (username, firstname, lastname, email, password, upark_id) VALUES ('evepaul', 'evelin', 'paulik', 'email.com', 'epaupau', 'up_ep');
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO users (username, firstname, lastname, email, password, upark_id) VALUES ('evepaul', 'evelin', 'paulik', 'email.com', 'epaupau', 'up_ep');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO users (username, firstname, lastname, email, password, upark_id) VALUES ('chlogua', 'chloe', 'guan', 'cmail.com', 'cguagua', 'up_cg');
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO users (username, firstname, lastname, email, password, upark_id) VALUES ('chlogua', 'chloe', 'guan', 'cmail.com', 'cguagua', 'up_cg');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO users (username, firstname, lastname, email, password, upark_id) VALUES ('conwu', 'connie', 'wu', 'cw.com', 'cwuwu', 'up_cw');
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO users (username, firstname, lastname, email, password, upark_id) VALUES ('conwu', 'connie', 'wu', 'cw.com', 'cwuwu', 'up_cw');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO users (username, firstname, lastname, email, password, upark_id) VALUES ('anthor', 'anthony', 'ornato', 'amail.com', 'aoror', 'up_ao');
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO users (username, firstname, lastname, email, password, upark_id) VALUES ('anthor', 'anthony', 'ornato', 'amail.com', 'aoror', 'up_ao');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\b\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO PARKINGLOTS ROWS
-\f2\b0\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\b\fs26 \cf2 INSERT INTO PARKINGLOTS ROWS
+\f2\b0\fs24 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (0, 'EP', 'YT', 27, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.115384
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.279405, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 775 Hamilton St
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$4.00', '$4.00', '0500AM - 1200AM', '0500AM - 1200AM', 638, 1);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (0, 'EasyPark', 'Yaletown', 27, 
+\f3 \cb3 -123.115384
+\f1 \cb1 , 
+\f3 \cb3 49.279405, 
+\f1 \cb1 '
+\f3 \cb3 775 Hamilton St
+\f1 \cb1 ', 'Vancouver', 'BC', 'CAN', '$4.00', '$4.00', '0500AM - 1200AM', '0500AM - 1200AM', 638, 1, '111111');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (1, 'EP', 'YT', 55, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.11785
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.27778, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 909 Mainland St
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$4.00', '$4.00', '0600AM - 1100PM', '0600AM - 1100PM', 152, 13);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (1, 'EasyPark', 'Yaletown', 55, 
+\f3 \cb3 -123.11785
+\f1 \cb1 , 
+\f3 \cb3 49.27778, 
+\f1 \cb1 '
+\f3 \cb3 909 Mainland St
+\f1 \cb1 ', 'Vancouver', 'BC', 'CAN', '$4.00', '$4.00', '0600AM - 1100PM', '0600AM - 1100PM', 152, 13, '111112');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (2, 'EP', 'YT', 65, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.122502
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.273109, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 181 Roundhouse Mews
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$2.75', '$2.75', '0700AM - 1100PM', '0700AM - 1100PM', 92, 3);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (2, 'EasyPark', 'Yaletown', 65, 
+\f3 \cb3 -123.122502
+\f1 \cb1 , 
+\f3 \cb3 49.273109, 
+\f1 \cb1 '
+\f3 \cb3 181 Roundhouse Mews
+\f1 \cb1 ', 'Vancouver', 'BC', 'CAN', '$2.75', '$2.75', '0700AM - 1100PM', '0700AM - 1100PM', 92, 3, '111113');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (3, 'IP', 'YT', 1260, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.12088
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.273786, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cf4 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec4 136 Davie St
-\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 ', 'Vancouver', 'BC', 'CAN', '$1.00', '$6.00', '0700AM - 1100PM', '0700AM - 1100PM', 58, 53);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (3, 'ImPark', 'Yaletown', 1260, 
+\f3 \cb3 -123.12088
+\f1 \cb1 , 
+\f3 \cb3 49.273786, 
+\f1 \cb1 '
+\f3 \cf4 \cb3 \strokec4 136 Davie St
+\f1 \cf2 \cb1 \strokec2 ', 'Vancouver', 'BC', 'CAN', '$1.00', '$6.00', '0700AM - 1100PM', '0700AM - 1100PM', 58, 53, '111114');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (4, 'IP', 'YT', 1301, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.120622
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.273918, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cf4 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec4 187 Davie St
-\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 ', 'Vancouver', 'BC', 'CAN', '$2.00', '$2.00', 'TBA', 'TBA', 214, 53);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (4, 'ImPark', 'Yaletown', 1301, 
+\f3 \cb3 -123.120622
+\f1 \cb1 , 
+\f3 \cb3 49.273918, 
+\f1 \cb1 '
+\f3 \cf4 \cb3 \strokec4 187 Davie St
+\f1 \cf2 \cb1 \strokec2 ', 'Vancouver', 'BC', 'CAN', '$2.00', '$2.00', 'TBA', 'TBA', 214, 53, '111115');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (5, 'IP', 'YT', 97, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.118112
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.279953, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cf4 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec4 827 Richards Street
-\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 ', 'Vancouver', 'BC', 'CAN', '$5.00', '$4.50', '24/7', '24/7', 92, 5);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (5, 'ImPark', 'Yaletown', 97, 
+\f3 \cb3 -123.118112
+\f1 \cb1 , 
+\f3 \cb3 49.279953, 
+\f1 \cb1 '
+\f3 \cf4 \cb3 \strokec4 827 Richards Street
+\f1 \cf2 \cb1 \strokec2 ', 'Vancouver', 'BC', 'CAN', '$5.00', '$4.50', '24/7', '24/7', 92, 5, \'a0'111116');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (6, 'IP', 'YT', 1868, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.117726
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.279985, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 480 Robson St
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', 'Reserved', 'Reserved', '24/7', '24/7', 34, 15);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (6, 'ImPark', 'Yaletown', 1868, 
+\f3 \cb3 -123.117726
+\f1 \cb1 , 
+\f3 \cb3 49.279985, 
+\f1 \cb1 '
+\f3 \cb3 480 Robson St
+\f1 \cb1 ', 'Vancouver', 'BC', 'CAN', 'Reserved', 'Reserved', '24/7', '24/7', 34, 15, '111117');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (7, 'IP', 'YT', 2212, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.117519
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.279357, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 825 Homer St
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$3.00', '$6.00 flat', '0600AM - 1100PM', '0600AM - 1100PM', 50, 50);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (7, 'ImPark', 'Yaletown', 2212, 
+\f3 \cb3 -123.117519
+\f1 \cb1 , 
+\f3 \cb3 49.279357, 
+\f1 \cb1 '
+\f3 \cb3 825 Homer St
+\f1 \cb1 ', 'Vancouver', 'BC', 'CAN', '$3.00', '$6.00 flat', '0600AM - 1100PM', '0600AM - 1100PM', 50, 50, '111118');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (8, 'IP', 'YT', 971, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.11624
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.278441, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 838 Hamilton St
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$3.25', '$9.50 max', 'TBA', 'TBA', 152, 15);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (8, 'ImPark', 'Yaletown', 971, 
+\f3 \cb3 -123.11624
+\f1 \cb1 , 
+\f3 \cb3 49.278441, 
+\f1 \cb1 '
+\f3 \cb3 838 Hamilton St
+\f1 \cb1 ', 'Vancouver', 'BC', 'CAN', '$3.25', '$9.50 max', 'TBA', 'TBA', 152, 15, '111119');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (9, 'IP', 'YT', 1945, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.115465
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.278094, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 815 Cambie St
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$1.50', 'Closed', '0700AM - 1200AM', 'Closed', 37, 10);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (9, 'ImPark', 'Yaletown', 1945, 
+\f3 \cb3 -123.115465
+\f1 \cb1 , 
+\f3 \cb3 49.278094, 
+\f1 \cb1 '
+\f3 \cb3 815 Cambie St
+\f1 \cb1 ', 'Vancouver', 'BC', 'CAN', '$1.50', 'Closed', '0700AM - 1200AM', 'Closed', 37, 10, '111120');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (10, 'IP', 'YT', 1310, -123.114792, 49.276851, '858 Beatty St', 'Vancouver', 'BC', 'CAN', '$5.00', '$4.00', '0700AM - 0100AM', 'TBA', 189, 19);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (10, 'ImPark', 'Yaletown', 1310, -123.114792, 49.276851, '858 Beatty St', 'Vancouver', 'BC', 'CAN', '$5.00', '$4.00', '0700AM - 0100AM', 'TBA', 189, 19, '111121');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (11, 'IP', 'YT', 1411, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.113761
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.28089, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 349 West Georgia
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$3.00', '$15.00 event', '24/7', \'9124/7\'92, 9, 1);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (11, 'ImPark', 'Yaletown', 1411, 
+\f3 \cb3 -123.113761
+\f1 \cb1 , 
+\f3 \cb3 49.28089, 
+\f1 \cb1 '
+\f3 \cb3 349 West Georgia
+\f1 \cb1 ', 'Vancouver', 'BC', 'CAN', '$3.00', '$15.00 event', '24/7', \'9124/7\'92, 9, 1, '111122');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (12, 'AP', 'YT', 9059, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.118604
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.276752, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 910 Mainland St
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$3.75', '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 Closed
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', '0630AM - 0600PM', 'Closed', 200, 20);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (12, 'Advanced Parking', 'Yaletown', 9059, 
+\f3 \cb3 -123.118604
+\f1 \cb1 , 
+\f3 \cb3 49.276752, 
+\f1 \cb1 '
+\f3 \cb3 910 Mainland St
+\f1 \cb1 ', 'Vancouver', 'BC', 'CAN', '$3.75', '
+\f3 \cb3 Closed
+\f1 \cb1 ', '0630AM - 0600PM', 'Closed', 200, 20, '111123');
+\f2\fs24 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf2 \
+\pard\pardeftab720\sl320\partightenfactor0
 
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (13, 'MP', 'YT', 86, 
-\f3 \cf5 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec5 -123.118261
-\f1 \cf2 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 , 
-\f3 \cf5 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec5 49.275726\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2 , 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 1008 Cambie Street
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$3.50', '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 $7.00 flat
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', '0600AM - 0600PM', '0600PM - 1200AM', 40, 12);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
-
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (14, 'MP', 'YT', 86, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.122959
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.278167, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 1045 Seymour Street
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$3.00', '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 $8.00 flat
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', '24/7', '24/7', 40, 12);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
-
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (15, 'MP', 'YT', 9, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.112467
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.280418, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 649 Cambie Street
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$4.00', '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 $4.00
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', '0600AM - 0800PM', '0600PM - 0400PM', 260, 32);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
-
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (16, 'MP', 'YT', 31, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.110794
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.280448, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 111 Dunsmuir St
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$3.00', 'Closed', '0600AM - 1130PM', 'Closed', 240, 132);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720
-\cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
-\pard\pardeftab720\sl320
-
-\f1\fs26 \cf2 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space) VALUES (17, 'MP', 'YT', 8, 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 -123.102583
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 , 
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 49.266167, 
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 '
-\f3 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 2122 Quebec Street
-\f1 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 ', 'Vancouver', 'BC', 'CAN', '$2.00', '$4.00 flat', '24/7', '24/7', 18, 12);
-\f2\fs24 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \
+\f1\fs26 \cf2 INSERT INTO parkinglots (upark_id, company, area, lot_num, longitude, latitude, address, city, province, country, rates_weekday, rates_weekend, hours_weekday, hours_weekend, total_space, avail_space, paybyphone_id) VALUES (13, 'Metro Parking', 'Yaletown', 86, 
+\f3\fs30 \cf5 \strokec5 -123.118261
+\f1\fs26 \cf2 \strokec2 , 
+\f3\fs30 \cf5 \strokec5 49.275726
+\fs26 \cf2 \cb3 \strokec2 , 
+\f1 \cb1 '
+\f3 \cb3 1008 Cambie Street
+\f1 \cb1 ', 'Vancouver', 'BC', 'CAN', '$3.50', '
+\f3 \cb3 $7.00 flat
+\f1 \cb1 ', '0600AM - 0600PM', '0600PM - 1200AM', 40, 12, '111124');
+\f2\fs24 \
 }
