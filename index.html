@@ -9,40 +9,13 @@
         <link rel="stylesheet" type="text/css" href="mystyle.css">
     </head>
     <style>
-
-    .centerdiv{
-        float:left;
-        height:100px;
-        width: 60%;
-    }
-
-    #lotDistance {
-        text-align: center;
-    }
-    div.container {
-        border: 1px solid black;
-        overflow: hidden;
-        width: 100%;
-    }
-    #lotImage {
-        width: 45%;
-        height: 100%;
-        float: left;
-        border: dashed;
-    }
-    #lotInfo {
-        width: 45%;
-        height: 100%;
-        float:right;
-    }
-
     </style>
     <body>
         <div id="resultsTop" class="top">
             <div class="wrap">
-                <div class="left" onclick="window.location.href='profile.html'"><img id="profileicon" class="profile" src="images/profile.png"></div>
-                <div class="center" onclick="window.location.href='results.html'"><img class="smalllogo" src="images/logo_transparent.png"></div>
-                <div class="right" onclick="window.location.href='results.html'"><img class="target" src="images/target.png"></div>	
+                <div class="topleft" onclick="window.location.href='profile.html'"><img id="profileicon" class="profile" src="images/profile.png"></div>
+                <div class="topcenter" onclick="window.location.href='results.html'"><img class="smalllogo" src="images/logo_transparent.png"></div>
+                <div class="topright" onclick="window.location.href='results.html'"><img class="target" src="images/target.png"></div>	
             </div>
             <br>
 
@@ -51,7 +24,71 @@
         </div>
 
         <div id="map"></div>
+        <div id="resultsList"></div>
 
+        <div id="lotInfo">
+            <div id="info">
+                <div id="container">
+                    <div id="lotImage">lot image
+                    </div>
+                    <div id="lotDetails">
+                        <p id="lotName">inPark</p>
+                        <p id="lotAddress" class="margin">123 Yaletown St.</p>
+                        <p id="lotCity" class="margin">Vancouver, V2J 2S5</p>
+                        <br>
+                        <div class="margin">
+                            <div id="inline">
+                                <p class="bold">Total Parking Spaces:</p>
+                                <p id="lotSpace"> 167</p>
+                            </div>
+                        </div><br>
+                        <div class="margin">
+                            <div id="inline">
+                                <p class="bold">PayByPhone Lot #:</p>
+                                <p id="lotID"> 2512</p>
+                            </div>
+                        </div>
+                    </div>          
+                </div>
+            </div>
+        
+            <div class="line-separator"></div>
+
+            <div id="rates">
+                <h4>RATES</h4>
+                <div class="ratesContainer">
+                    <div id="inline">
+                        <p class="bold">Monday - Friday:</p>
+                        <p id="weekdayPrice"> $1</p>
+                    </div>
+                    <div id="inline">
+                        <p class="bold">Weekends & Holidays:</p>
+                        <p id="weekendPrice"> $1.20</p>
+                    </div>      
+                </div>
+            </div>
+
+            <div class="line-separator"></div>
+
+            <div id="hours">
+                <h4>HOURS OF OPERATION</h4>
+                <div id="inline">
+                    <p class="bold">Monday - Friday:</p>
+                    <p id="weekdayHours"> 1:00AM-6:00PM</p>
+                </div>
+                <div id="inline">
+                    <p class="bold">Weekends & Holidays:</p>
+                    <p id="weekendHours"> 1:00AM-6:00PM</p>
+                </div>
+            </div>
+
+            <div class="line-separator"></div>
+            
+            <div id="special">
+                <h4>SPECIAL NOTES</h4>
+                <p id="lotSpecialNotes" class="margin">No motorcyles</strong></p>
+            </div>
+        </div>
         
 
     </body>
