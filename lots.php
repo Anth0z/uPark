@@ -1,4 +1,8 @@
 <?php
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+
     $methodType = $_SERVER['REQUEST_METHOD'];
     if ($methodType === 'GET') {
         if (isset($_GET["type"]) && !empty($_GET["type"])) {
