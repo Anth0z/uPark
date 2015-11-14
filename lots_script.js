@@ -1,7 +1,8 @@
 $(document).ready(function(){
-
     var allLots = [];
     $("#lotInfo").css("display", "none");
+    $("#backicon").css("display", "none");
+    $("#directions").css("display", "none");
     getParkingLots();
 
     function getParkingLots(){
@@ -17,56 +18,65 @@ $(document).ready(function(){
                     var lots = resp['lots'];
                     for(var i in lots) {
                         allLots.push(lots[i]);
+
                         var centerDiv = document.createElement("div");
                         centerDiv.className = "centerdiv";
-
                         var leftDiv = document.createElement("div")
-                        leftDiv.className = "left";
-                        
+                        leftDiv.className = "left";                        
                         var rightDiv = document.createElement("div")
                         rightDiv.className = "right";
-                        
                         var results = document.createElement("div");
                         results.className = "results";
                         results.id = allLots[i].upark_id;
 
-                        $(leftDiv).append("Weekday Rates: "+allLots[i].rates_weekday+"/hr" + "<br/><br/>" +"Weekend Rates: "+allLots[i].rates_weekend+"/hr");
-                        
-                        $(centerDiv).append("<h3>"+ allLots[i].company +" "+ allLots[i].lot_num +"</h3><br/> "+ allLots[i].address);
+                        $(centerDiv).append("<h2>"+ allLots[i].company +"   Lot "+ allLots[i].lot_num +"</h2> "+ allLots[i].address+"<br/>"+allLots[i].city);
+
+                        var d = new Date();
+                        var n = d.getDay()
+
+                        if (n==0 || n==6){
+                            $(leftDiv).append("<h2>"+allLots[i].rates_weekend+"/hr</h2>");
+                            $(centerDiv).append("<h3>Hours: "+allLots[i].hours_weekend);
+                        } else {
+                            $(leftDiv).append("<h2>"+allLots[i].rates_weekday+"/hr</h2>");
+                            $(centerDiv).append("<h3>Hours: "+allLots[i].hours_weekday);
+                        }
+                        $(rightDiv).append("<h3>Availability: </h3><br/> 70%");
 
                         $(results).append(leftDiv);
                         $(results).append(centerDiv);
-                        
+                        $(results).append(rightDiv);
+
                         $("#resultsList").append(results);
                         
                         console.log(allLots[i]);
-                        
                     }
                     
                    
                     $(".results").click(function(){
-                        console.log("click div"); 
-                        console.log(this.id);
-                        console.log(allLots);
-                        console.log(allLots[this.id].company);
                         console.log(allLots[this.id]);
+
                         $("#resultsList").css("display", "none");
                         $("#lotInfo").css("display", "block");
+                        $("#profileicon").css("display", "none");
+                        $("#backicon").css("display", "inline-block");
+                        $("#directions").css("display", "block");
 
-                        $("#lotName").html(allLots[this.id].company + allLots[this.id].lot_num);
+                        $("#lotName").html(allLots[i].company +"   Lot "+ allLots[i].lot_num);
                         $("#lotAddress").html(allLots[this.id].address);
                         $("#lotCity").html(allLots[this.id].city);
                         $("#lotSpace").html(allLots[this.id].total_space);
-                        $("#lotName").html(allLots[this.id].company);
+                        
 
                         $("#weekdayPrice").html(allLots[this.id].rates_weekday);
                         $("#weekendPrice").html(allLots[this.id].rates_weekend);
+                        $("#weekdayHours").html(allLots[this.id].hours_weekday);
+                        $("#weekendHours").html(allLots[this.id].hours_weekend);
 
-                        
-
-
-
-                        //$("#lotInfo").append("<h2>"+allLots[this.id].company+" "+allLots[this.id].lot_num+"</h2>"+allLots[this.id].address+"<br/>"+allLots[this.id].city+" "+allLots[this.id].province);
+                        $(".topleft").click(function(){
+                            $("#lotInfo").css("display", "none");
+                            $("#resultsList").css("display", "block");
+                        });
                     });
 
                 }
