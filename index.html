@@ -13,29 +13,34 @@
     <body>
         <div id="resultsTop" class="top">
             <div class="wrap">
-                <div class="topleft" onclick="window.location.href='profile.html'"><img id="profileicon" class="profile" src="images/profile.png"></div>
+                <div class="topleft" >
+                    <img id="profileicon" class="profile" src="images/profile.png" onclick="window.location.href='profile.html'">
+                    <img id="backicon" class="profile" src="images/back.png">
+                </div>
                 <div class="topcenter" onclick="window.location.href='results.html'"><img class="smalllogo" src="images/logo_transparent.png"></div>
                 <div class="topright" onclick="window.location.href='results.html'"><img class="target" src="images/target.png"></div>	
             </div>
-            <br>
-
-            <input type="text" class="search" placeholder="search destination">
-            </input>
         </div>
 
-        <div id="map"></div>
+        <div id="map">
+            <input type="text" class="search" placeholder="Find Parking By Address or Area">
+            </input>
+            
+        </div>
+        
         <div id="resultsList"></div>
 
         <div id="lotInfo">
             <div id="info">
                 <div id="container">
-                    <div id="lotImage">lot image
-                    </div>
+                    
+                    <img id="lotImage" src="./images/EasyPark_27.jpg"/>
+                    
                     <div id="lotDetails">
-                        <p id="lotName">inPark</p>
-                        <p id="lotAddress" class="margin">123 Yaletown St.</p>
+                        <h2 id="lotName">inPark</h2>
+                        <p id="lotAddress" class="">123 Yaletown St.</p>
                         <p id="lotCity" class="margin">Vancouver, V2J 2S5</p>
-                        <br>
+                        
                         <div class="margin">
                             <div id="inline">
                                 <p class="bold">Total Parking Spaces:</p>
@@ -47,7 +52,13 @@
                                 <p class="bold">PayByPhone Lot #:</p>
                                 <p id="lotID"> 2512</p>
                             </div>
+                        </div><br/>
+                        <div class="margin">
+                            <div id="inline">
+                                <button type="button" id="directions">GET DIRECTIONS</button>
+                            </div>
                         </div>
+                        
                     </div>          
                 </div>
             </div>
@@ -55,15 +66,19 @@
             <div class="line-separator"></div>
 
             <div id="rates">
-                <h4>RATES</h4>
+                
                 <div class="ratesContainer">
-                    <div id="inline">
-                        <p class="bold">Monday - Friday:</p>
-                        <p id="weekdayPrice"> $1</p>
+                    <div class="infoleft">
+                        <h3>RATES: </h3>
+
                     </div>
-                    <div id="inline">
+                    <div class="infocenter">
+                        <p class="bold">Monday - Friday</p>
+                        <p class="lotHrRate" id="weekdayPrice"> $1</p>
+                    </div>
+                    <div class="inforight">
                         <p class="bold">Weekends & Holidays:</p>
-                        <p id="weekendPrice"> $1.20</p>
+                        <p class="lotHrRate" id="weekendPrice"> $1.20</p>
                     </div>      
                 </div>
             </div>
@@ -71,23 +86,36 @@
             <div class="line-separator"></div>
 
             <div id="hours">
-                <h4>HOURS OF OPERATION</h4>
-                <div id="inline">
-                    <p class="bold">Monday - Friday:</p>
-                    <p id="weekdayHours"> 1:00AM-6:00PM</p>
-                </div>
-                <div id="inline">
-                    <p class="bold">Weekends & Holidays:</p>
-                    <p id="weekendHours"> 1:00AM-6:00PM</p>
+                <div class="ratesContainer">
+                    <div class="infoleft">
+                        <h3>HOURS: </h3>
+                    </div>
+                    <div class="infocenter">
+                        <p class="bold">Monday - Friday:</p>
+                        <p class="lotHrRate" id="weekdayHours"> 1:00AM-6:00PM</p>
+                    </div>
+                    <div class="inforight">
+                        <p class="bold">Weekends & Holidays:</p>
+                        <p class="lotHrRate" id="weekendHours"> 1:00AM-6:00PM</p>
+                    </div>
                 </div>
             </div>
 
             <div class="line-separator"></div>
             
             <div id="special">
-                <h4>SPECIAL NOTES</h4>
-                <p id="lotSpecialNotes" class="margin">No motorcyles</strong></p>
+                <div class="infoleft">
+                    <h3>SPECIAL NOTES:</h3>
+                </div>
+                <div class="list">
+                    <ul id="lotSpecialNotes">
+                        <li>Special Notes about the Parking Lot</li>
+                        <li>Special Notes about the Parking Lot</li>
+                        <li>Special Notes about the Parking Lot</li>
+                    </ul>
+                </div>
             </div>
+             <div class="line-separator"></div>
         </div>
         
 
