@@ -13,32 +13,39 @@
     color: white;
 }
 #title {
-	width: 80%;
-	margin: auto;
+	width: 100%;
+	margin: 15px;
 	text-align: center;
 	font-weight: bold;
-	color: blue;
+	font-size:20px;
+	color: rgb(34,152, 211);
 }
 #subtitle {
 	text-align: center;
 	font-weight: bold;
 }
-.checkbox{
-	float: right;
-}
+
 #btncheck{
 	background-color: rgb(34,152, 211);
 	color: white;
 	width: auto;
-	height: 30px;
+	float:right;
+	height: 40px;
+	width:100px;
+	font-size:18px;
+	border-radius:5px;
+	margin:15px;
 }
 .license {
     color: rgb(34,152, 211);
     font-family: 'Droid Sans', sans-serif;
     font-size: 16px;
 }
-input[type=checkbox] {
-    zoom:1.5;
+#eulatext{
+	color: rgb(34,152, 211);
+	font-size:16px;
+	margin:15px;
+
 }
 #forgot{
     text-align: center;
@@ -89,7 +96,7 @@ h2, h3{
     padding-top:5px;
 
 }
-.signin_input {
+.login_input {
     padding-left: 15px;
     height: 45px;
     width: 60%;
@@ -100,6 +107,7 @@ h2, h3{
     font-size: 18px;
     background-color:rgba(255, 255, 255, 0.8);
 }
+
 .buttons {
     width: 63%;
     height: 50px;
@@ -167,6 +175,10 @@ body{
 	width: auto;
 	height: 40px;
 }
+.formlogo{
+	width: auto;
+	height: 150px;
+}
 .target {
 	width: auto;
 	height:35px;
@@ -190,6 +202,7 @@ body{
 }
 
 
+
 /* for iphone 4 and 5*/
 @media (min-width: 320px){
 
@@ -199,7 +212,7 @@ body{
 	    margin-top: 10vh;
 	}
 
-	#text {
+	.text {
 	    width: 65%;
 	    margin: auto;
 	    color: white;
@@ -305,7 +318,10 @@ body{
 	.margin {
 		margin-top: -5px;
 	}
-
+	.divmargin{
+		margin-bottom:15px;
+		height:1px;
+	}
 
 	#rates {
 		width: 100%;
