@@ -1,60 +1,16 @@
-@charset "utf-8";
-/* CSS Document */
-
-body{
-	font-size:16px;
-	margin:0;
-}
-
-#flashcenter{
-    text-align: center;
-}
-#logo {
-	height: auto;
-    margin: auto;
-    margin-top: 20px;
-    cursor:hand;
-	max-width: 300px;
+/* items not affected by width*/
+#splash{
+	width:100vw;
+	height:100vh;
+	background-color:rgb(34,152, 211);
+	text-align:center;
 }
 #center{
     text-align: center;
 }
-#text {
-    width: 70%;
-    margin: auto;
-    color: white;
-    margin-bottom: 40px;
-}
-input {
-    width: 70%;
-    height: 30px;
-    margin-top: 25px;
-    font-family: 'Droid Sans', sans-serif;
-    font-size: 16px;
-}
 #or {
     text-align: center;
     color: white;
-}
-.button{
-    width: 50%;
-	max-width: 300px;
-    height: 40px;
-    background-color: rgb(34,152, 211);
-    color: white;
-    margin-top: 25px;
-}
-#or {
-    text-align: center;
-    color: white;
-}
-.forgotInput {
-    width: 70%;
-    height: 40px;
-    margin-bottom: -10px;
-    margin-top: -10px;
-    font-family: 'Droid Sans', sans-serif;
-    font-size: 16px;
 }
 #title {
 	width: 80%;
@@ -66,10 +22,6 @@ input {
 #subtitle {
 	text-align: center;
 	font-weight: bold;
-}
-#text {
-	width: 85%;
-    margin: auto;
 }
 .checkbox{
 	float: right;
@@ -83,185 +35,22 @@ input {
 .license {
     color: rgb(34,152, 211);
     font-family: 'Droid Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 input[type=checkbox] {
     zoom:1.5;
-}
-
-
-#user {
-    background:  
-    url(images/profile.png) left no-repeat;
-    padding-left: 17px;
-    height: 40px;
-    width: 70%;
-    text-indent: 60px;
-    box-shadow: 0 0 3px white; 
-    margin: 10px;
-    color:white;
-}
-#pass {
-    background: 
-    url(https://cdn1.iconfinder.com/data/icons/social-messaging-productivity-1/128/profile2-128.png) left no-repeat;
-    padding-left: 17px;
-    height: 40px;
-    width: 70%;
-    text-indent: 60px;
-    box-shadow: 0 0 3px white;
-    color:white;
 }
 #forgot{
     text-align: center;
     color: white;
 }
-.buttons {
-    width: 70%;
-    height: 40px;
-    margin: auto;
-}
-#signintext {
-    height:100%;
-    width:70%;
-    float:right;
-    color: white;
-    text-align: left;
-    vertical-align: middle;
-    line-height: 10px;
-}
-#loginButton {
-    background-color: aqua;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-}
-#create {
-    background-color: blue;
-    color: white;
-}
-#createImage {
-    margin-left: 10px;
-    height:100%;
-    width:10%;
-    float: left;
-}
-.profile {
-    height: 40px;
-    width: auto;
-}
-.results {
-	margin-top: 5px;
-	padding-top: 15px;
-	padding-bottom:10px;
-	width: 100vw;
-	height: 100px;
-	border: outset 1px;
-	color:rgb(14, 63, 88);
-}
-.top{
-	background-color: rgb(34,152, 211);
-	position:fixed;
-	top:0;
-	width:100vw;
-	height:70px;
-}
-
-.smalllogo{
-	width: auto;
-	height: 70px;
-}
-.target {
-	width: auto;
-	height:40px;
-}
-.search{
-	text-align: center;
-	width:100%;
-	display: block;
-	margin: 0;
-}
-.wrap {
-	text-align: center;
-    height: 50px;
-}
-
-.center{
-	margin: 0 auto;
-	display:inline;
-	}
 #terms{
 	text-align: center;
-}
-#signOut{
-	background-color: rgb(34,152, 211);
-	text-align: center;
-	width: 20%;
-}
-#profileImage{
-	text-align: center;
-	background-color: grey;
-	height: 200px;
-}
-#profileImageInsert{
-	text-align: center;
-	border: dashed;
-	width: 50%;
-	height:150px;
-	margin:auto;
-}
-#timer{
-	text-align:center;
-	margin-top: -30px;
-}
-#map{
-	height: 40vh;
-	background-color: #eee;
-	width:100vw;
-	position:fixed;
-	top:70px;
 }
 #directions{
 	text-align: center;
 	background-color: rgb(34,152, 211);
 	color: white;
-
-}
-#resultsList{
-    width:100vw;
-   	position:absolute;
-    top:50vh;
-    overflow: hidden;
-    z-index: -1;
-}
-#info{
-	width: 100%;
-	height: 40%;
-	padding-top: 30px;
-	padding-bottom:5px;
-}
-div#container {
-	overflow: hidden;
-	width: 100%;
-}
-#lotImage {
-	width: 45%;
-	height: 80%;
-	float: left;
-	border: dashed;
-	margin-left: 0px;
-}
-#lotInfo {
-    width:100vw;
-   	position:absolute;
-    top:50vh;
-    overflow: hidden;
-    z-index: -1;
-}
-#lotName {
-	font-weight: bold;
-}
-.margin {
-	margin-top: -5px;
 }
 #inline p {
 	display: inline;
@@ -270,39 +59,8 @@ div#container {
 	font-weight: bold;
 }
 .line-separator{
-height:1px;
-border-bottom:1px solid rgba(14, 63, 88, 0.4);
-}
-#rates {
-	width: 100%;
-	height: 100px;
-}
-#lotDay {
-	width: 45%;
-	height: 100%;
-	float: left;
-}
-#lotPrice {
-	width: 45%;
-	height: 100%;
-	float:left;
-}
-#hours {
-	margin-bottom: 5px;
-	width: 100%;
-	height: auto;
-}
-#special {
-	padding-bottom: 20px;
-	width: 100%;
-	height: 80px;
-}
-#timerButton {
-	position: fixed;
-	bottom: 0px;
-	width: 100%;
-	height:50px;
-	background-color: rgb(34,152, 211);
+	height:1px;
+	border-bottom:1px solid rgba(14, 63, 88, 0.4);
 }
 #startParking {
 	color: white;
@@ -312,89 +70,11 @@ border-bottom:1px solid rgba(14, 63, 88, 0.4);
 	overflow: hidden;
 	width: 100%;
 }
-
-
 .circleBase{
 	border-radius: 50%
 }
-.circle {
-	width: 30px;
-	height: 30px;
-	background: green;
-	border: 3px solid black;
-	margin: auto;
-	margin-top: 10px;
-}
-.left{
-	float:left;
-	height:100px;
-	width: 25%;
-	padding-left: 15px;
-	padding-top:25px;
-	font-size:1.5em;
-}
-.right{
-	float:right;
-	height:100px;
-	width: 20%;
-	padding-right:10px;
-}
-.centerdiv{
-	float:left;
-	height:100px;
-	width: 47%;
-    padding-left:10px;
-}
-.infoleft{
-	float:left;
-	height:auto;
-	width: 25%;
-	padding-left: 15px;
-	padding-top:30px;
-	font-size:1.1em;
-	text-align: center;
-}
-.infocenter{
-	float:left;
-	height:auto;
-	width: 30%;
-    padding-left:10px;
-    text-align: center;
-}
-.inforight{
-	float:left;
-	height:auto;
-	width: 30%;
-	margin-left:10px;
-	padding-right:10px;
-	text-align: center;
-}
-.list{
-	float:left;
-	height:auto;
-	width: 60%;
-    padding-left:10px;
-}
 .lotHrRate{
 	font-size:1.25em;
-}
-
-.topleft{
-	float:left;
-	height:auto;
-	width: 10%;
-	padding:2%;
-}
-.topcenter{
-	float:left;
-	height:50px;
-	width: 71%;
-}
-.topright{
-	float:right;
-	height:50px;
-	width: 10%;
-	padding:2%;
 }
 #lotDistance {
 	text-align: center;
@@ -404,20 +84,334 @@ div.container {
 	overflow: hidden;
 	width: 100%;
 }
-#lotImage {
-	width: 45%;
-	height: 100%;
-	float: left;
-	border: 2px dashed;
-}
-#lotDetails {
-	width: 45%;
-	height: 100%;
-	float:right;
-}
-
 h2, h3{
     margin:0px;
     padding-top:5px;
+
+}
+.signin_input {
+    padding-left: 15px;
+    height: 45px;
+    width: 60%;
+    border:inset 2px;
+    border-radius:5px;
+    margin: 0px;
+    color:rgb(7, 34, 165);
+    font-size: 18px;
+    background-color:rgba(255, 255, 255, 0.8);
+}
+.buttons {
+    width: 63%;
+    height: 50px;
+    margin-top: 15px;
+    font-size:20px;
+    border:outset;
+    border-radius:5px;
+    color:rgb(7, 34, 165);
+    background-color:rgba(34,152, 211, 0.8);
+}
+a{
+	text-decoration: none
+}
+
+
+
+/* Top Bar, Search Bar and Maps 
+stays the same size regardless of width 
+Hence declared outside of media queries*/
+body{
+	font-family: 'Droid Sans', sans-serif;
+	font-size:16px;
+	margin:0;
+}
+#bg1{
+	width:100vw;
+	height:100vh;
+	background-image:url("./images/parking-lot-overhead-view.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+#bg2{
+	width:100vw;
+	height:100vh;
+	background-image:url("./images/parking-lot-background.jpg");
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+.top{
+	background-color: rgb(34,152, 211);
+	position:fixed;
+	top:0;
+	width:100vw;
+	height:60px;
+}
+.topleft{
+	float:left;
+	height:auto;
+	width: 10%;
+	padding:2%;
+}
+.topcenter{
+	float:left;
+	height:auto;
+	width: 68%;
+	padding:2%;
+}
+.topright{
+	float:right;
+	height:auto;
+	width: 10%;
+	padding:2%;
+}
+.smalllogo{
+	width: auto;
+	height: 40px;
+}
+.target {
+	width: auto;
+	height:35px;
+}
+.profile {
+	    height: 35px;
+	    width: auto;
+}	
+.search{
+	text-align: center;
+	width:100%;
+	display: block;
+	margin: 0;
+}	
+#map{
+	height: 40vh;
+	background-color: #eee;
+	width:100vw;
+	position:fixed;
+	top:60px;
+}
+
+
+/* for iphone 4 and 5*/
+@media (min-width: 320px){
+
+	#logo {
+		max-width: 300px;
+		height: auto;
+	    margin-top: 10vh;
+	}
+
+	#text {
+	    width: 65%;
+	    margin: auto;
+	    color: white;
+	    margin-bottom: 40px;
+	    font-size: 18px;
+	}
+	input {
+	    width: 70%;
+	    height: 30px;
+	    margin-top: 25px;
+	    font-family: 'Droid Sans', sans-serif;
+	    font-size: 16px;
+	}
+
+	.button{
+	    width: 50%;
+		max-width: 300px;
+	    height: 40px;
+	    background-color: rgb(34,152, 211);
+	    color: white;
+	    margin-top: 25px;
+	}
+	.results {
+		margin-top: 5px;
+		padding-top: 15px;
+		padding-bottom:10px;
+		width: 100vw;
+		height: 100px;
+		border: outset 1px;
+		color:rgb(14, 63, 88);
+	}
+	.wrap {
+		text-align: center;
+	    height: 50px;
+	}
+	.center{
+		margin: 0 auto;
+		display:inline;
+		}
+	#signOut{
+		background-color: rgb(34,152, 211);
+		text-align: center;
+		width: 20%;
+	}
+	#profileImage{
+		text-align: center;
+		background-color: grey;
+		height: 200px;
+	}
+	#profileImageInsert{
+		text-align: center;
+		border: dashed;
+		width: 50%;
+		height:150px;
+		margin:auto;
+	}
+	#timer{
+		text-align:center;
+		margin-top: -30px;
+	}
+	#resultStatus{
+		position:absolute;
+		width:100vw;
+		top:48vh;
+		font-family: 'Droid Sans', sans-serif;
+	    font-size: 20px;
+	    padding:10px;
+	    color:rgb(14, 63, 88);
+	    background-color:rgb(211, 236, 248);
+	    z-index:-1;
+	    overflow:hidden;
+	}
+	#resultsList{
+	    width:100vw;
+	   	position:absolute;
+	    top:54vh;
+	    overflow: hidden;
+	    z-index: -1;
+	    font-family: 'Droid Sans', sans-serif;
+	    font-size: 16px;
+	}
+	#info{
+		width: 100%;
+		height: 40%;
+		padding-top: 20px;
+		padding-bottom:5px;
+	}
+	div#container {
+		overflow: hidden;
+		width: 100%;
+	}
+
+	#lotInfo {
+	    width:100vw;
+	   	position:absolute;
+	    top:50vh;
+	    overflow: hidden;
+	    z-index: -1;
+	    font-family: 'Droid Sans', sans-serif;
+	    font-size: 16px;
+	}
+
+	.margin {
+		margin-top: -5px;
+	}
+
+
+	#rates {
+		width: 100%;
+		height: 100px;
+	}
+	#lotDay {
+		width: 45%;
+		height: 100%;
+		float: left;
+	}
+	#lotPrice {
+		width: 45%;
+		height: 100%;
+		float:left;
+	}
+	#hours {
+		margin-bottom: 5px;
+		width: 100%;
+		height: auto;
+	}
+	#special {
+		padding-bottom: 20px;
+		width: 100%;
+		height: 80px;
+	}
+	#timerButton {
+		position: fixed;
+		bottom: 0px;
+		width: 100%;
+		height:50px;
+		background-color: rgb(34,152, 211);
+	}
+
+	.circle {
+		width: 30px;
+		height: 30px;
+		background: green;
+		border: 3px solid black;
+		margin: auto;
+		margin-top: 10px;
+	}
+	.left{
+		float:left;
+		height:100px;
+		width: 25%;
+		padding-left: 15px;
+		padding-top:25px;
+		font-size:1.3em;
+	}
+	.right{
+		float:right;
+		height:100px;
+		width: 20%;
+		padding-right:10px;
+	}
+	.centerdiv{
+		float:left;
+		height:100px;
+		width: 47%;
+	    padding-left:10px;
+	}
+	.infoleft{
+		float:left;
+		height:auto;
+		width: 25%;
+		padding-left: 15px;
+		padding-top:30px;
+		font-size:1.1em;
+		text-align: center;
+		color:rgb(166, 147, 124);
+	}
+	.infocenter{
+		float:left;
+		height:auto;
+		width: 30%;
+	    padding-left:10px;
+	    text-align: center;
+	}
+	.inforight{
+		float:left;
+		height:auto;
+		width: 30%;
+		margin-left:10px;
+		padding-right:10px;
+		text-align: center;
+	}
+	.list{
+		float:left;
+		height:auto;
+		width: 60%;
+	    padding-left:10px;
+	}
+
+	#lotImage {
+		width: 50%;
+		height: auto;
+		float: left;
+		margin-left:5px;
+		border: 2px dashed;
+		position:relative;
+		overflow:hidden;
+	}
+	#lotDetails {
+		width: 45%;
+		height: 100%;
+		float:right;
+	}
 
 }
