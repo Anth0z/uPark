@@ -2,123 +2,34 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>uPark - Results Page</title>
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>uPark - Login</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
     </head>
-    <style>
-    </style>
+
     <body>
-        <div id="resultsTop" class="top">
-            <div class="wrap">
-                <div class="topleft" >
-                    <img id="profileicon" class="profile" src="images/profile.png" onclick="window.location.href='profile.html'">
-                    <img id="backicon" class="profile" src="images/back.png">
-                </div>
-                <div class="topcenter" onclick="window.location.href='index.html'"><img class="smalllogo" src="images/logosmall_transparent.png"></div>
-                <div class="topright" onclick="window.location.href='index.html'"><img class="target" src="images/target.png"></div>	
+        <div id="splash">
+            <img id="logo" src="images/logo.png">
+        </div>
+        <div id="bg1">
+            <div id="center">
+                <img id="logo" src="./images/logo_transparent.png">
             </div>
-        </div>
-
-        <div id="map">
-            <input type="text" class="search" placeholder="Find Parking By Address or Area">
-            </input>
-        </div>
-        <div id="resultStatus">
-            Parking Lots Near Your Current Location
-        </div>
-        
-        <div id="resultsList"></div>
-
-        <div id="lotInfo">
-            <div id="info">
-                <div id="container">
-                    
-                    <img id="lotImage" src="./images/EasyPark_27.jpg"/>
-                    
-                    <div id="lotDetails">
-                        <h2 id="lotName">inPark</h2>
-                        <p id="lotAddress" class="">123 Yaletown St.</p>
-                        <p id="lotCity" class="margin">Vancouver, V2J 2S5</p>
-                        
-                        <div class="margin">
-                            <div id="inline">
-                                <p class="bold">Total Parking Spaces:</p>
-                                <p id="lotSpace"> 167</p>
-                            </div>
-                        </div><br>
-                        <div class="margin">
-                            <div id="inline">
-                                <p class="bold">PayByPhone Lot #:</p>
-                                <p id="lotID"> 2512</p>
-                            </div>
-                        </div><br/>
-                        <div class="margin">
-                            <div id="inline">
-                                <button type="button" id="directions">GET DIRECTIONS</button>
-                            </div>
-                        </div>
-                        
-                    </div>          
-                </div>
-            </div>
-        
-            <div class="line-separator"></div>
-
-            <div id="rates">
+            <div id="center">
+                <form id="loginForm" action="login_session.php" method="POST">
+                    <input class="login_input" id="user" type="text" name="userid" placeholder="Username" required>
+                    <input class="login_input" id="pass" type="password" name="pwd" placeholder="Password" required/>
+                    <input type="button" value="LOGIN" class="buttons" id="login_button"/>
+                </form>
                 
-                <div class="ratesContainer">
-                    <div class="infoleft">
-                        <h3>RATES: </h3>
-
-                    </div>
-                    <div class="infocenter">
-                        <p class="bold">Monday - Friday</p>
-                        <p class="lotHrRate" id="weekdayPrice"> $1</p>
-                    </div>
-                    <div class="inforight">
-                        <p class="bold">Weekends & Holidays:</p>
-                        <p class="lotHrRate" id="weekendPrice"> $1.20</p>
-                    </div>      
-                </div>
+                <button class="buttons" id="signup_button">New User? JOIN uPARK!</button>
             </div>
-
-            <div class="line-separator"></div>
-
-            <div id="hours">
-                <div class="ratesContainer">
-                    <div class="infoleft">
-                        <h3>HOURS: </h3>
-                    </div>
-                    <div class="infocenter">
-                        <p class="bold">Monday - Friday:</p>
-                        <p class="lotHrRate" id="weekdayHours"> 1:00AM-6:00PM</p>
-                    </div>
-                    <div class="inforight">
-                        <p class="bold">Weekends & Holidays:</p>
-                        <p class="lotHrRate" id="weekendHours"> 1:00AM-6:00PM</p>
-                    </div>
-                </div>
+           
+            <a href="./forgotpassword.html"><p id="forgot">Forgot your password?</p></a>            
             </div>
-
-            <div class="line-separator"></div>
-            
-            <div id="special">
-                <div class="infoleft">
-                    <h3>SPECIAL NOTES:</h3>
-                </div>
-                <div class="list">
-                    <ul id="lotSpecialNotes">
-                        <li>Special Notes about the Parking Lot</li>
-                        <li>Special Notes about the Parking Lot</li>
-                        <li>Special Notes about the Parking Lot</li>
-                    </ul>
-                </div>
-            </div>
-             <div class="line-separator"></div>
         </div>
-        
 
     </body>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="./script/lots_script.js"></script>
+    <script src="./script/login_script.js"></script>
+    
 </html>

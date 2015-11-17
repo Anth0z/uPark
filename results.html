@@ -1,130 +1,133 @@
+<!DOCTYPE html>
 <html>
-<title>Results</title>
-<head>
-<link rel="stylesheet" type="text/css" href="mystyle.css">
-</head>
-<style>
-.centerdiv{
-	float:left;
-	height:100px;
-	width: 60%;
-}
-#lotDistance {
-	text-align: center;
-}
-div.container {
-	border: 1px solid black;
-	overflow: hidden;
-	width: 100%;
-}
-#lotImage {
-	width: 45%;
-	height: 100%;
-	float: left;
-	border: dashed;
-}
-#lotInfo {
-	width: 45%;
-	height: 100%;
-	float:right;
-}
-.results {
-	margin-top: 20px;
-	padding-top: 10px;
-}
-.results{
-	width: 100%;
-	height: 100px;
-	border: solid;
-	margin-bottom: -80px;
-}
-</style>
-<body>
-	<div id="resultsTop" class="top">
-		<div class="wrap">
-			<div class="left" onclick="window.location.href='profile.html'"><img id="profileicon" class="profile" src="images/profile.png"></div>
-			<div class="center" onclick="window.location.href='results.html'"><img class="smalllogo" src="images/logo_transparent.png"></div>
-			<div class="right" onclick="window.location.href='results.html'"><img class="target" src="images/target.png"></div>	
-		</div>
-		<br>
+    <head>
+        <meta charset="utf-8">
+        <title>uPark - Results Page</title>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+    <body>
+        <div id="resultsTop" class="top">
+            <div class="wrap">
+                <div class="topleft" >
+                    <img id="profileicon" class="profile" src="images/profile.png" onclick="window.location.href='profile.html'">
+                    <img id="backicon" class="profile" src="images/back.png">
+                </div>
+                <div class="topcenter" onclick="window.location.href='results.html'">
+                    <img class="smalllogo" src="images/logosmall_transparent.png">
+                </div>
+                <div class="topright" onclick="window.location.href='index.html'">
+                    <img class="target" src="images/target.png">
+                </div>	
+            </div>
+        </div>
+        <div id="mapdiv">
+            <input type="text" class="search" id="searchBar" placeholder="Find Parking by Address or Area"/>
+            <div id="map">
+            </div>  
+        </div>
+        <div id="resultStatus">
+            Parking Lots Near Your Current Location
+        </div>
+        
+        <div id="resultsList"></div>
 
-		<input type="text" class="search" placeholder="search destination">
-		</input>
-	</div>
+        <div id="lotInfo">
+            <div id="info">
+                <div id="container">
+                    
+                    <img id="lotImage" src="./images/EasyPark_27.jpg"/>
+                    
+                    <div id="lotDetails">
+                        <h2 id="lotName">inPark</h2>
+                        <p id="lotAddress" class="">123 Yaletown St.</p>
+                        <p id="lotCity" class="margin">Vancouver, V2J 2S5</p>
+                        
+                        <div class="margin">
+                            <div id="inline">
+                                <p class="bold">Total Parking Spaces:</p>
+                                <p id="lotSpace"> 167</p>
+                            </div>
+                        </div><br>
+                        <div class="margin">
+                            <div id="inline">
+                                <p class="bold">PayByPhone Lot #:</p>
+                                <p id="lotID"> 2512</p>
+                            </div>
+                        </div><br/>
+                        <div class="margin">
+                            <div id="inline">
+                                <button type="button" id="directions">GET DIRECTIONS</button>
+                            </div>
+                        </div>
+                        
+                    </div>          
+                </div>
+            </div>
+        
+            <div class="line-separator"></div>
 
-	<div id="map">
-	</div>
+            <div id="rates">
+                
+                <div class="ratesContainer">
+                    <div class="infoleft">
+                        <h3>RATES: </h3>
 
-	<div class="results" id="lot1" onclick="window.location.href='lotInfo.html'">
-			<div id="left">
-				<h2 id="lotPrice">$100</h2>
-			</div>
-			<div class="centerdiv"> 
-				<div id="container">
-					<div id="lotImage">lot image
-					</div>
-					<div id="lotInfo">
-						<h3 id="lotName">inPark</h3>
-						<p id="lotAddress">123 Yaletown St.</p>
-					</div>
-				</div>	
-			</div>
-			<div id="right">
-				<div id="lotAvailability" class="circleBase circle"> </div>
-				<p id="lotDistance"> 100000km</p>
-			</div>	
-		</div>
-	</div>
-<br>
-<br>
-<br>
-<br>
-	<div class="results" id="lot2" onclick="window.location.href='lotInfo.html'">
-			<div id="left">
-				<h2 id="lotPrice">$100</h2>
-			</div>
-			<div class="centerdiv"> 
-				<div id="container">
-					<div id="lotImage">lot image
-					</div>
-					<div id="lotInfo">
-						<h3 id="lotName">inPark</h3>
-						<p id="lotAddress">123 Yaletown St.</p>
-					</div>
-				</div>	
-			</div>
-			<div id="right">
-				<div id="lotAvailability" class="circleBase circle"> </div>
-				<p id="lotDistance"> 100000km</p>
-			</div>	
-		</div>
-	</div>
-	<br>
-<br>
-<br>
-<br>
-	<div class="results" id="lot3" onclick="window.location.href='lotInfo.html'">
-			<div id="left">
-				<h2 id="lotPrice">$100</h2>
-			</div>
-			<div class="centerdiv"> 
-				<div id="container">
-					<div id="lotImage">lot image
-					</div>
-					<div id="lotInfo">
-						<h3 id="lotName">inPark</h3>
-						<p id="lotAddress">123 Yaletown St.</p>
-					</div>
-				</div>	
-			</div>
-			<div id="right">
-				<div id="lotAvailability" class="circleBase circle"> </div>
-				<p id="lotDistance"> 100000km</p>
-			</div>	
-		</div>
-	</div>
+                    </div>
+                    <div class="infocenter">
+                        <p class="bold">Monday - Friday</p>
+                        <p class="lotHrRate" id="weekdayPrice"> $1</p>
+                    </div>
+                    <div class="inforight">
+                        <p class="bold">Weekends & Holidays:</p>
+                        <p class="lotHrRate" id="weekendPrice"> $1.20</p>
+                    </div>      
+                </div>
+            </div>
 
+            <div class="line-separator"></div>
 
+            <div id="hours">
+                <div class="ratesContainer">
+                    <div class="infoleft">
+                        <h3>HOURS: </h3>
+                    </div>
+                    <div class="infocenter">
+                        <p class="bold">Monday - Friday:</p>
+                        <p class="lotHrRate" id="weekdayHours"> 1:00AM-6:00PM</p>
+                    </div>
+                    <div class="inforight">
+                        <p class="bold">Weekends & Holidays:</p>
+                        <p class="lotHrRate" id="weekendHours"> 1:00AM-6:00PM</p>
+                    </div>
+                </div>
+            </div>
 
-</body>
+            <div class="line-separator"></div>
+            
+            <div id="special">
+                <div class="infoleft">
+                    <h3>SPECIAL NOTES:</h3>
+                </div>
+                <div class="list">
+                    <ul id="lotSpecialNotes">
+                        <li>Special Notes about the Parking Lot</li>
+                        <li>Special Notes about the Parking Lot</li>
+                        <li>Special Notes about the Parking Lot</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line-separator"></div>
+            <button id="startTimer">
+                Start Parking!
+            </button>
+        </div>
+        
+
+    </body>
+   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./script/lots_script.js"></script>
+     <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&libraries=places&callback=initMap"
+        async defer>
+    </script>
 </html>
