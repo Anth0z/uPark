@@ -166,7 +166,6 @@ body{
 	float:left;
 	height:auto;
 	width: 10%;
-	padding:2%;
 }
 .topcenter{
 	float:left;
@@ -178,7 +177,6 @@ body{
 	float:right;
 	height:auto;
 	width: 10%;
-	padding:2%;
 }
 .smalllogo{
 	width: auto;
@@ -191,10 +189,12 @@ body{
 .target {
 	width: auto;
 	height:35px;
+	margin:12px;
 }
 .profile {
 	    height: 35px;
 	    width: auto;
+	    margin:12px;
 }	
 .search{
 	text-align: center;

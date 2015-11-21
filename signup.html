@@ -12,8 +12,8 @@
                 <img class="formlogo" src="./images/logo_transparent.png">
             </div>
             <div id="center">
-                <button class="buttons" id="signup_button">Sign Up Using Facebook</button>
-                <button class="buttons" id="signup_button">Sign Up Using Twitter</button>
+                <button class="buttons" id="fb_signup_button">Sign Up Using Facebook</button>
+                <button class="buttons" id="tw_signup_button">Sign Up Using Twitter</button>
                 <div class="divmargin"></div>
                 <div class="text">
                     Don't worry, <br/>we won't post without your permission.
@@ -22,13 +22,18 @@
                 </div>
 
                 <form id="signup">
-                    <input class="login_input" id="username" type="text" name="userid" placeholder="Username"/>
-                    <input class="login_input" id="firstname" type="text" name="fname" placeholder="First Name"/>
-                    <input class="login_input" id="lastname" type="text" name="lname" placeholder="Last Name"/>
-                    <input class="login_input" id="email" type="email" name="email" placeholder="Email Address"/>
-                    <input class="login_input" id="password" type="password" name="pwd" placeholder="Password"/>
-                </form>
-                <button class="buttons" id="signup_sub_button">SIGNUP!</button>                      
+                    <input class="login_input" id="username" type="text" name="userid" placeholder="Username" autofocus required pattern="[a-z,A-Z]{2,20}" oninput="checkUsername(this);"/>
+
+                    <input class="login_input" id="firstname" type="text" name="fname" placeholder="First Name" required pattern="[a-z,A-Z]{2,20}" oninput="checkFirstName(this);"/>
+
+                    <input class="login_input" id="lastname" type="text" name="lname" placeholder="Last Name" required pattern="[a-z,A-Z]{3,20}" oninput="checkLastName(this);"/>
+
+                    <input class="login_input" id="email" type="email" name="email" placeholder="Email Address" required oninput="checkEmail(this);"/>
+
+                    <input class="login_input" id="password" type="password" name="pwd" placeholder="Password" required oninput="checkPassword(this);"/>
+                
+                    <input type="button" class="buttons" id="signup_sub_button" value="SIGNUP!"></input> 
+                </form>                     
             </div>
         </div>
         <div id="eula">
@@ -54,6 +59,10 @@
         </div>
 
     </body>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./script/form_script.js"></script>
     <script src="./script/login_script.js"></script>
+    <script src="./script/fb_script.js"></script>
+
 </html>

@@ -15,9 +15,9 @@
                 <img id="logo" src="./images/logo_transparent.png">
             </div>
             <div id="center">
-                <form id="loginForm" action="login_session.php" method="POST">
-                    <input class="login_input" id="user" type="text" name="userid" placeholder="Username" required>
-                    <input class="login_input" id="pass" type="password" name="pwd" placeholder="Password" required/>
+                <form id="loginForm">
+                    <input class="login_input" id="user" type="text" name="usrname" placeholder="Username" value="" required autofocus pattern="[a-z,A-Z]{4,50}" oninput="checkUsername(this);">
+                    <input class="login_input" id="pass" type="password" name="pwd" placeholder="Password" value="" required pattern="[a-z,A-Z, 0-9]{4,50}" oninput="checkUsername(this);"/>
                     <input type="button" value="LOGIN" class="buttons" id="login_button"/>
                 </form>
                 
@@ -25,11 +25,14 @@
             </div>
            
             <a href="./forgotpassword.html"><p id="forgot">Forgot your password?</p></a>            
-            </div>
+            
         </div>
 
     </body>
+    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="./script/form_script.js"></script>
     <script src="./script/login_script.js"></script>
+    
     
 </html>

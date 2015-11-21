@@ -1,12 +1,26 @@
 $(document).ready(function(){
 	//loading main login page
 	$("#eula").css("display", "none");
+    $("#bg1").css("display", "none");
+    $("#bg1").delay(1000).fadeIn(500);
 	$("#splash").delay(1000).fadeOut(1000);
     
     //PROFILE PAGE
     //checking to see if there's already a session
     //for profile page - get username and favourites
     $("#favlotInfo").css("display", "none");
+
+    function ConvertFormToJSON(form){
+        var array = $(form).serializeArray();
+        var json = {};
+
+        jQuery.each(array, function() {
+            // don't send 'undefined'
+            json[this.name] = this.value || '';
+        });
+        return json;
+    }
+
     getUserProfileInfo();
 	function getUserProfileInfo() {
         $.ajax({
@@ -77,10 +91,10 @@ $(document).ready(function(){
                                     var lots = resp2['lots'];
                                     console.log(lots);
                                     for(var i in lots) {
-                                        console.log(lots[i]);
+                                        //console.log(lots[i]);
                                         allLots.push(lots[i]);
-                                        console.log(allLots);
                                     }
+                                    console.log(allLots);
                                 }
                             
                                 $(".fav").click(function(){
@@ -147,21 +161,12 @@ $(document).ready(function(){
         });
 
         // from: http://www.developerdrive.com/2013/04/turning-a-form-element-into-json-and-submiting-it-via-jquery/
-        function ConvertFormToJSON(form){
-            var array = $(form).serializeArray();
-            var json = {};
-
-            jQuery.each(array, function() {
-                // don't send 'undefined'
-                json[this.name] = this.value || '';
-            });
-            return json;
-        }
+        
 
     });
 
     //login check
-	$("#login_button").click(function(){
+	function doLogin() {
 		var formData = ConvertFormToJSON("#loginForm");
         console.log("Login data to send: ", formData);
 		$.ajax({
@@ -183,16 +188,19 @@ $(document).ready(function(){
                 console.log(jqXHR.statusText, textStatus);
             }
         });
-        function ConvertFormToJSON(form){
-	        var array = $(form).serializeArray();
-	        var json = {};
-	        jQuery.each(array, function() {
-	            // don't send 'undefined'
-	            json[this.name] = this.value || '';
-	        });
-	        return json;
-	    }
-	});
+	}
+
+    $("#login_button").click(function(){
+        doLogin();
+    });
+
+    $('#loginForm input').bind('keypress', function(e) {
+        var code = e.keyCode || e.which;
+        if(code == 13) {
+            // Pressed enter, invoke login
+            doLogin();
+        }
+    });
 //go to sign up page
 	$("#signup_button").click(function(){
 		window.location.assign("signup.html");
@@ -224,7 +232,7 @@ $(document).ready(function(){
 		alert("Your password has been reset. Please login with your new password");
 		window.location.assign("login.html");
 	});
-	$(".topleft").click(function(){
+	$("#backicon").click(function(){
 		window.location.assign("results.html");
 	});
 

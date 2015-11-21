@@ -181,7 +181,7 @@
                         
                         var availColor = document.createElement("div");
                         availColor.setAttribute('id', 'availColor');
-                        console.log(availColor);
+                        //console.log(availColor);
                         
                         if (availPercent <= 33){
                             availColor.setAttribute('style', 'background-color: red;');   
@@ -208,7 +208,10 @@
                         //console.log(allLots[i]);
                     }
                     
-                   
+                    $("#profileicon").click(function(){
+                            //console.log("to profile page");
+                            window.location.assign("profile.html");
+                        });
                     $(".results").click(function(){
                         console.log(allLots[this.id]);
 
@@ -238,17 +241,14 @@
                             alert("Parking Timer coming soon!");
                         });
 
-                        $(".topleft").click(function(){
+                        $("#backicon").click(function(){
                             $("#lotInfo").css("display", "none");
                             $("#resultsList").css("display", "block");
                             $("#backicon").css("display", "none");
                             $("#profileicon").css("display", "block");
                             $("#resultStatus").css("display", "block");
                         });
-
-
-
-
+      
                     });
 
                 }
